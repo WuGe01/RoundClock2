@@ -28,6 +28,8 @@
     </style>
 </head>
 <body>
+
+    <button class="reset" onclick="javascript:window.location.reload()">萬花筒變更</button>
     <div class="main">
         <img class="top-img" src="./img/bg.png" >
         <div class="focus">
@@ -36,6 +38,7 @@
         <img class="sec" id="sec" style="width: 500px;height: 500px;" src="./img/time-03.png">
         <div class="glass"></div>
         <div class="bottom"></div>
+        <div class="bottom2"></div>
 <?php
     for ($i=1; $i < 21; $i++) { 
     echo "<div class='box box".$i."'><div class='gear gear".$i."'>";
@@ -44,6 +47,7 @@
     }
 ?>
     </div></div>
+    <div></div>
 <script>
         setTime()
         function setTime() {           
