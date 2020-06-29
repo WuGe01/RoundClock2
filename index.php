@@ -37,7 +37,7 @@
             z-index: 55;
         }
         .bottom{
-            background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.7)1%, rgba(255, 221, 205, 0.9)96%);
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.7)51%, rgba(255, 221, 205, 0.9)96%);
             display:flex;
             width: 500px;
             height: 500px;
