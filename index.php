@@ -16,7 +16,7 @@
     for ($i=1; $i < 21; $i++) {      
         echo ".gear".$i."{";
         $p=rand(1,2);
-        ($p==1)?$w=rand(5,80):$w=rand(12,70);
+        ($p==1)?$w=rand(5,75):$w=rand(12,70);
         ($p==1)?$h=rand(22,59):$h=rand(5,75);
         echo "left: ".$w."%;" ;
         echo "top: ".$h."%;" ;
