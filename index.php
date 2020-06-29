@@ -3,66 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
     <title>指針時鐘設計</title>
     <style>
-        body{
-            width: 100vw;
-            height: 100vh;
-            background-color: #111;
-        }
-        .main{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .box{
-            display:flex;
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            left:5%;
-            top:25%;
-            animation: rote 5s infinite linear;
-        }
-        .glass{
-            background-color: rgb(150, 150, 150,0.2);
-            display:flex;
-            width: 500px;
-            height: 500px;
-            border-radius: 250px;
-            position: absolute;
-            left:5%;
-            top:25%;
-            z-index: 55;
-        }
-        .bottom{
-            background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.7)51%, rgba(255, 221, 205, 0.9)96%);
-            display:flex;
-            width: 500px;
-            height: 500px;
-            border-radius: 250px;
-            position: absolute;
-            left:5%;
-            top:25%;
-            z-index: -1;
-        }
-        .top-img{
-            position: absolute;
-            top:50%;
-            width: 591px;
-            height: 1000px; 
-            z-index: 99;
-        }
-        .focus{ 
-            width: 580px;
-            height: 1000px; 
-            position: absolute;
-            top:50%;
-        }
-        .gear{
-            position: absolute;
-        }
 <?php
     for ($i=1; $i < 21; $i++) { 
         echo ".box".$i."{";
@@ -82,20 +25,15 @@
         echo "}";
     }       
 ?>
-        @keyframes rote{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }  
     </style>
 </head>
 <body>
     <div class="main">
         <img class="top-img" src="./img/bg.png" >
         <div class="focus">
+        <img class="hrs" id="hrs" style="width: 500px;height: 500px;" src="./img/time-01.png">
+        <img class="min" id="min" style="width: 500px;height: 500px;" src="./img/time-02.png">
+        <img class="sec" id="sec" style="width: 500px;height: 500px;" src="./img/time-03.png">
         <div class="glass"></div>
         <div class="bottom"></div>
 <?php
@@ -106,6 +44,23 @@
     }
 ?>
     </div></div>
+<script>
+        setTime()
+        function setTime() {           
+            let time =new Date();
+            let sec=time.getSeconds();
+            let min=time.getMinutes();
+            let hour=time.getHours();
+            let x=sec*6;
+            let y=(min*60+sec)*0.1;
+            let z=(hour*60+min)*0.5;
+            document.querySelector("#min").style.transform=`rotate(${y}deg)`
+            document.querySelector("#hrs").style.transform=`rotate(${z}deg)`
+            document.querySelector("#sec").style.transform=`rotate(${x}deg)`
+        }
+        setInterval(setTime,1000);
+
+</script>
     
 </body>
 </html>

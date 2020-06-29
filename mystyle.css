@@ -1,0 +1,84 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+}
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box{
+    display:flex;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left:5%;
+    top:25%;
+    animation: rote 5s infinite linear;
+}
+.glass{
+    background-color: rgb(150, 150, 150,0.2);
+    display:flex;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    position: absolute;
+    left:5%;
+    top:25%;
+    z-index: 55;
+}
+.bottom{
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.7)51%, rgba(255, 221, 205, 0.9)96%);
+    display:flex;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    position: absolute;
+    left:5%;
+    top:25%;
+    z-index: -1;
+}
+.top-img{
+    position: absolute;
+    top:50%;
+    width: 591px;
+    height: 1000px; 
+    z-index: 99;
+}
+.focus{ 
+    width: 580px;
+    height: 1000px; 
+    position: absolute;
+    top:50%;
+}
+.gear{
+    position: absolute;
+}
+.hrs{
+    position: absolute;
+    left:5%;
+    top:25%;
+    z-index: 56;
+}
+.min{
+    position: absolute;
+    left:5%;
+    top:25%;
+    z-index: 57;
+}
+.sec{
+    position: absolute;
+    left:5%;
+    top:25%;
+    z-index: 58;
+}
+@keyframes rote{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}  
