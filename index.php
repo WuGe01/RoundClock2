@@ -42,7 +42,7 @@
 <?php
     for ($i=1; $i < 21; $i++) { 
     echo "<div class='box box".$i."'><div class='gear gear".$i."'>";
-    include "./img/gear-".$i.".svg";
+    echo "<img src='./img/gear-".$i.".svg' style='width: 100px;height: 100px;'>";
     echo "</div></div>";
     }
 ?>
@@ -63,8 +63,6 @@
             document.querySelector("#sec").style.transform=`rotate(${x}deg)`
         }
         setInterval(setTime,1000);
-
-</script>
-    
+</script>  
 </body>
 </html>
