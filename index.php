@@ -16,7 +16,7 @@
     for ($i=1; $i < 21; $i++) {      
         echo ".gear".$i."{";
         $p=rand(1,2);
-        ($p==1)?$w=rand(5,75):$w=rand(12,70);
+        ($p==1)?$w=rand(5,75):$w=rand(12,65);
         ($p==1)?$h=rand(22,59):$h=rand(5,75);
         echo "left: ".$w."%;" ;
         echo "top: ".$h."%;" ;
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <button class="reset" onclick="javascript:window.location.reload()">萬花筒變更</button>
+    <div></div>
     <div class="main">
         <img class="top-img" src="./img/bg.png" >
         <div class="focus">
@@ -47,7 +47,7 @@
     }
 ?>
     </div></div>
-    <div></div>
+    <button class="reset" onclick="javascript:window.location.reload()">萬花筒變更</button>
 <script>
         setTime()
         function setTime() {           
